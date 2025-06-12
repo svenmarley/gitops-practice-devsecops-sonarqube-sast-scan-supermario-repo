@@ -1,0 +1,25 @@
+name: "Run SAST Scan on SuperMario Game Project"
+
+on:     # runs whenver new code is pushed to main branch
+  push:
+    branches:
+      - main
+
+jobs:   # multiple possible jobs that can be run
+
+  sonarqube_sast_scan:
+    runs-on: ubuntu-latest    # provided by GitHub free
+
+    steps:      # multple steps
+      - name: Checkout Repository
+        uses: actions/checkout@v3   # checkouts our repo code
+        with:
+          fetch-depth: 0    # fetches all versions of our code
+
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@master    # uses master branch
+        env:
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          SONAR_TOKEN:  ${{ secrets.SONAR_TOKEN }}
+
+ 
