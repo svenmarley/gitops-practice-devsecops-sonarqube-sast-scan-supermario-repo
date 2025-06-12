@@ -22,4 +22,5 @@ jobs:   # multiple possible jobs that can be run
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           SONAR_TOKEN:  ${{ secrets.SONAR_TOKEN }}
 
+ # just a comment o force a rerun
  
