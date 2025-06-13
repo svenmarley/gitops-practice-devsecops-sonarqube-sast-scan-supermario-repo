@@ -22,4 +22,12 @@ jobs:   # multiple possible jobs that can be run
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           SONAR_TOKEN:  ${{ secrets.SONAR_TOKEN }}
 
- # just a comment o force a rerun
+      - name: SonarQube Quality Gate Check 
+        uses: sonarsource/sonarqube-quality-gate-action@master
+        timeout-minutes: 5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}     # Required for SonarQube to get the status update on the quality gate
+
+
+
+ 
