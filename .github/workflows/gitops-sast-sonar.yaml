@@ -1,9 +1,9 @@
 name: "Run SAST Scan on SuperMario Game Project"
 
-on:     # runs whenver new code is pushed to main branch
-  push:
-    branches:
-      - main
+# on:     # runs whenver new code is pushed to main branch
+#   push:
+#     branches:
+#       - main
 
 jobs:   # multiple possible jobs that can be run
 
