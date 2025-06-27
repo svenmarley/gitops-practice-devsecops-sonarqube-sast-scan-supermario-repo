@@ -23,6 +23,6 @@ jobs:
       
       - name: Build and push Docker image
         run: |  # docker.build -t '' {DockerHub URL}/{DockerHub Username}/{DockerHub Repo}:{Static Tag} {directory where dockerfile is placed}
-          docker build -t docker.io/svenmarley/supermariogitopsproject: ${{ env.VERSION }} .
-          docker push docker.io/svenmarley/supermariogitopsproject: ${{ env.VERSION }}
+          docker build -t docker.io/svenmarley/supermariogitopsproject:${{ env.VERSION }} .
+          docker push docker.io/svenmarley/supermariogitopsproject:${{ env.VERSION }}
 
