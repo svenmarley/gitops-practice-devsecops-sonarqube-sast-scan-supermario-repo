@@ -31,14 +31,14 @@ Mario.TitleState.prototype.Enter = function() {
     this.logo.X = 0, this.logo.Y = 0;
     
     this.font = Mario.SpriteCuts.CreateRedFont();
-    this.font.Strings[0] = { String: "Press Y to Start Game", X: 96, Y: 120 };
+    this.font.Strings[0] = { String: "Press S to Start", X: 96, Y: 120 };
 
     this.logoY = 20;
     
     this.drawManager.Add(bgLayer0);
     this.drawManager.Add(bgLayer1);
     
-    this.bounce = 0;
+    this.bounce = 0; 
 	
 	Mario.GlobalMapState = new Mario.MapState();
 	//set up the global main character variable
@@ -76,7 +76,7 @@ Mario.TitleState.prototype.Draw = function(context) {
 };
 
 Mario.TitleState.prototype.CheckForChange = function(context) {
-    if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Y)) {
+    if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S)) {
         context.ChangeState(Mario.GlobalMapState);
     }
 };

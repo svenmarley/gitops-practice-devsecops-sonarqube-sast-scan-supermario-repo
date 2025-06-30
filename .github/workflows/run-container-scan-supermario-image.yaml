@@ -5,7 +5,6 @@ name: "Run Container Scan on Super Mario Docker Imgae with Quality Gate"
 #     branches:
 #       - main
 
-
 env:
   VERSION: $(( $(cat version.txt) + 1 ))
 
